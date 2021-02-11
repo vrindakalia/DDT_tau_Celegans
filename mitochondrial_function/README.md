@@ -4,6 +4,6 @@ Mitochondrial functions was determined using the Seahorse XFe96 extracellular fl
 Using apprpriate mitochondrial toxicants, the seahorse analyzer allows us to measure the performance of the mitochondria at baseline, at maximal capacity, and oxygen consumed through non-mitochondrial respiration. 
 
 As can be seen in this figure: 
-![alt text](https://github.com/vrindakalia/DDT_tau_Celegans/mitochondrial_function/seahorse_koopman_profile.tiff?raw=true)
+![](https://github.com/vrindakalia/DDT_tau_Celegans/tree/main/mitochondrial_function/figures/seahorse_test.gif)
 
 
