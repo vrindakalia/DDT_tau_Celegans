@@ -9,6 +9,6 @@ Over 18 measurements, the oxygen consumption rate (OCR) is determined, as can be
 The OCR profile provides measures of basal respiration, maximal respiration, spare capacity and non-mitochondrial respiration which can be assesed through these measurements: 
 
 
-<img src = "https://github.com/vrindakalia/DDT_tau_Celegans/blob/main/mitochondrial_function/figures/seahorse_koopman_profile_copy.png" width = "650" height = "550" >
+<img src = "https://github.com/vrindakalia/DDT_tau_Celegans/blob/main/mitochondrial_function/figures/seahorse_koopman_profile_copy.png" width = "650" height = "525" >
 
 
