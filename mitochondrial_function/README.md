@@ -1,8 +1,9 @@
-# DDT_tau_Celegans
-DDT exacerbates tau protein toxicity in worms
+# Mitochondrial function
+Mitochondrial functions was determined using the Seahorse XFe96 extracellular flux analysis which measured the rate of oxygen consumed by a number of worms in a 96 well flux analysis plate. Using the protocol designed by Koopman and colleagues (2016), we measured the rate of oxygen consumed by worms when treated with DDT. 
 
-The contents of this repository are associated with this manuscript:
-Kalia, V., Bradner, J., Niedzwiecki, M., Lau, F., Bucher, M., Manz, K., Coates Fuentes, Z., Pennell, K., Walker, D.I., Picard, M., Hu, W., Jones D.P., Miller, G.W. Cross-species metabolomic analysis of DDT and Alzheimer’s disease-associated tau toxicity. *In preparation*.
+Using apprpriate mitochondrial toxicants, the seahorse analyzer allows us to measure the performance of the mitochondria at baseline, at maximal capacity, and oxygen consumed through non-mitochondrial respiration. 
 
-Each folder represents an outcome measured in *C. elegans* exposed to the persistent organic pollutant, DDT. 
+As can be seen in this figure: 
+![alt text](https://github.com/vrindakalia/DDT_tau_Celegans/mitochondrial_function/seahorse_koopman_profile.tiff?raw=true)
+
 
