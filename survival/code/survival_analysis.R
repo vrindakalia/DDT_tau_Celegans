@@ -159,6 +159,6 @@ as_ggplot(legend)
 
 curve_legend <- plot_grid(curve +theme(legend.position = "none"), legend, ncol = 1, rel_heights = c(1, .1))
 
-pdf("survival/figures/curves_bars.pdf", width = 8, height = 4)
-plot_grid(curve_legend , bar.plot, labels = c("C", "D"), label_size = 12, rel_widths = c(2,1))
-dev.off()
+#pdf("survival/figures/curves_bars.pdf", width = 8, height = 4)
+#plot_grid(curve_legend , bar.plot, labels = c("C", "D"), label_size = 12, rel_widths = c(2,1))
+#dev.off()
