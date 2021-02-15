@@ -1,0 +1,4 @@
+# Survival analysis
+
+Wildtype worms and the transgenic strains were exposed to DDT or the solvent control until the young adult stage, around 72 hours. After exposure, worms were collected off plates and washed 4 times. The number of worms were counted and 25-35 worms were placed on standard 6 cm NGM plates to create 4 replicates per strain tested. Adult worms were counted and transferred everyday onto new 6cm NGM plates until they stopped producing progeny (~ adult day 6). At this point, worms were transferred onto 6 cm NGM plates with nystatin and ampicillin. Worms were then counted every other day and scored as dead if they did not respond to the gentle touch of a platinum wire. A worm was censored from the plate if it was missing, showed internal hatching, or was damaged during transfer. Worms were followed until they were all dead. Data was analyzed using Kaplan Meier survival calculations and the log-rank test.
+
