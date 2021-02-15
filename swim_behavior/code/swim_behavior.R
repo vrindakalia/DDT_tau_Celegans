@@ -10,7 +10,16 @@ library(gridExtra)
 library(ggpubr)
 library(cowplot)
 
-sem <- read_tsv("swim_behavior/data/all_strains_sem.txt")
+three <- read_tsv("swim_behavior/data/raw_data_aggregated.txt")
+
+# SEM to reduce day-to-day variability
+run.summarised <- three %>% group_by(run, assay.name, strain.name, trt) %>% 
+    summarise(mean = mean(measure, na.rm = T), sd = sd(measure, na.rm = T), n()) 
+
+sem <- run.summarised %>% group_by(assay.name, strain.name, trt) %>% 
+    summarise(sum.mean = mean(mean), se = sd(mean)/sqrt(length(mean)), n()) 
+
+#sem <- read_tsv("swim_behavior/data/all_strains_sem.txt")
 
 waveint <- sem %>% 
     filter(assay.name %in% c("WaveInitRate")) %>% 
@@ -114,9 +123,9 @@ legend_b <- get_legend(
 plot_grid(prow, legend_b, ncol = 1, rel_heights = c(1, .1))
 
 # To save plot as a pdf
-pdf("swim_behavior/figures/swim_main_figure.pdf", width = 6, height = 6)
-plot_grid(prow, legend_b, ncol = 1, rel_heights = c(1, .1))
-dev.off()
+#pdf("swim_behavior/figures/swim_main_figure.pdf", width = 6, height = 6)
+#plot_grid(prow, legend_b, ncol = 1, rel_heights = c(1, .1))
+#dev.off()
 
 ######################
 # SUPPLEMENTAL FIGURE
@@ -142,6 +151,6 @@ supplemental <- sem %>%
     scale_x_discrete(labels = c("N2 \n(Control)", "BR5271 \n(Non-agg)", "BR5270 \n(Agg)"))
 
 # To save plot as a pdf
-pdf("swim_behavior/figures/swim_supplemental.pdf", width = 6, height = 10)
-supplemental
-dev.off()
+#pdf("swim_behavior/figures/swim_supplemental.pdf", width = 6, height = 10)
+#supplemental
+#dev.off()
