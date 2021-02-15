@@ -1,0 +1,4 @@
+# Levels of DDT and metabolites detected 
+
+A synchronized population of wildtype worms, created using hypochlorite treatment, were grown on 10cm NGM plates with 0.3, 3, or 30 $\mu$M DDT, and the solvent control. The non-aggregating and aggregating worms were similarly synchronized and exposed to 3 $\mu$M DDT or the solvent control. All strains were collected after 72 hours of exposure, at the young adult stage. They were washed in M9 4x and sorted into aliquots of 1000-1200 worms using the COPAS FP-250. Once created, the volume of M9 in each aliquot was reduced to 100 $\mu$l and each sample was snap frozen in liquid nitrogen. To extract DDT and its metabolites, the worm cuticle was disrupted by bead beating and the samples were analyzed for levels of p,p’-DDT and its metabolite p,p’-DDE at the Pennell lab in Brown University.
+

@@ -136,6 +136,6 @@ legend <- get_legend(
 plot_grid(prow, legend, ncol = 1, rel_heights = c(1, .1))
 
 # To save plot as a pdf
-pdf("worm_size/figures/extinction_l4_adult.pdf", width = 3, height = 6)
-plot_grid(prow, legend, ncol = 1, rel_heights = c(1, .1))
-dev.off()
+#pdf("worm_size/figures/extinction_l4_adult.pdf", width = 3, height = 6)
+#plot_grid(prow, legend, ncol = 1, rel_heights = c(1, .1))
+#dev.off()
