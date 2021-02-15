@@ -149,13 +149,13 @@ all.2 <- sample.conc.avg %>%
 n2 <- plot_grid(n2.1, n2.2, nrow = 2)
 all <- plot_grid(all.1, all.2, nrow = 2)
 
-pdf("DDT_levels/figures/supplemental.pdf", width = 7, height = 6)
-plot_grid(n2, all, nrow = 1, labels = c("A", "B"))
-dev.off()
+#pdf("DDT_levels/figures/supplemental.pdf", width = 7, height = 6)
+#plot_grid(n2, all, nrow = 1, labels = c("A", "B"))
+#dev.off()
 
 
-pdf("DDT_levels/figures/main_n2.pdf", width = 4, height = 3)
-plot_grid(n2_figure, nrow = 1, labels = c("A"))
-dev.off()
+#pdf("DDT_levels/figures/main_n2.pdf", width = 4, height = 3)
+#plot_grid(n2_figure, nrow = 1, labels = c("A"))
+#dev.off()
 
 
