@@ -258,7 +258,7 @@ prof_legend <- plot_grid(prof, legend_p,  ncol = 1, rel_heights = c(1, .1))
 plot_grid(prof_legend, row_legend, nrow = 2, rel_heights = c(1.5,3), labels = c("A", ""), label_size = 12)
 
 # To save plot as a pdf
-#pdf("figures/ocr_bars.pdf", width = 7.5, height = 10)
+#pdf("mitochondrial_function/figures/ocr_bars.pdf", width = 7.5, height = 10)
 #plot_grid(prof_legend, row_legend, nrow = 2, rel_heights = c(1.5,3), labels = c("A", ""), label_size = 12)
 #dev.off()
 
