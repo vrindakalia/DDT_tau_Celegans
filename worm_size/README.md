@@ -9,6 +9,6 @@ Below, we see the flow cell and the movement of worms through th flow cell and t
 
 Data for each object can be scatte plot to determine a certain population to be gated.
 
-<img src = "https://github.com/vrindakalia/DDT_tau_Celegans/blob/main/worm_size/figures/copas_run.gif" width = "500" height = "500">
+<img src = "https://github.com/vrindakalia/DDT_tau_Celegans/blob/main/worm_size/figures/copas_run.gif" width = "600" height = "500">
 
 
