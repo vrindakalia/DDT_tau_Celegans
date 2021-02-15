@@ -4,7 +4,7 @@ The COPAS Flow Pilot (FP) 250 is a tool used for high-throughput manipulation of
 
 
 Below, we see the flow cell and the movement of worms through th flow cell and their size and thickness is determined through laser excitation.
-<img src = "https://github.com/vrindakalia/DDT_tau_Celegans/blob/main/worm_size/figures/flow_cell_wm.gif" width = "450" height = "600">
+<img src = "https://github.com/vrindakalia/DDT_tau_Celegans/blob/main/worm_size/figures/flow_cell_wm.gif" width = "500" height = "600">
 
 Data for each object can be scatte plot to determine a certain population to be gated.
 
