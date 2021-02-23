@@ -82,7 +82,10 @@ bar.plot <- bars %>%
          fill = "") +
     scale_x_discrete(labels = c("N2 \n(Control)", "BR5271 \n(Non-agg)", "BR570 \n(Agg)"))
 
-pdf("learning_behavior/figures/lines_bars.pdf", width = 8, height = 4)
-plot_grid(line.plot, bar.plot, rel_widths = c(2, 1), labels = c("A", "B"), label_size = 12,
+#pdf("learning_behavior/figures/lines_bars.pdf", width = 8, height = 4)
+#plot_grid(line.plot, bar.plot, rel_widths = c(2, 1), labels = c("A", "B"), label_size = 12,
+          #align = "hv", axis = "t")
+#dev.off()
+
+stam.plot <- plot_grid(line.plot, bar.plot, rel_widths = c(2, 1), labels = c("A", "B"), label_size = 12,
           align = "hv", axis = "t")
-dev.off()

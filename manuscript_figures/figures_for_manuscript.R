@@ -24,3 +24,18 @@ pdf("manuscript_figures/figure3.pdf", width = 5, height = 13)
 plot_grid(swim, seahorse, ncol = 1, rel_heights = c(0.7,1))
 dev.off()
 
+###############
+# FIGURE 4
+###############
+
+
+###############
+# FIGURE 5
+###############
+source("survival/code/survival_analysis.R")
+source("learning_behavior/code/stam.R")
+
+pdf("manuscript_figures/figure5.pdf", width = 8, height = 7)
+plot_grid(stam.plot, survival.plot, ncol = 1)
+dev.off()
+

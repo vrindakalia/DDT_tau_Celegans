@@ -219,7 +219,7 @@ profile <- ggplot(data = ocr_worms_plot, mapping = aes(x = Measurement, y = mean
     geom_point(aes(color = treatment), shape = 1) +
     ylim(0, 48) +
     labs(
-        x = "Measurement no.",
+        x = "Measurement number",
         y = "Oxygen consumption rate\n(pmol/min per worm)"
     ) +
     scale_linetype_manual(values = c(2,1)) +
@@ -228,7 +228,7 @@ profile <- ggplot(data = ocr_worms_plot, mapping = aes(x = Measurement, y = mean
     annotate("text", x = 15, y = 43, label = "Sodium \nazide", size = 3)+
     geom_segment(aes(x=5, xend=5, y=38, yend=0), color = "black", linetype = "dashed")+
     geom_segment(aes(x=15, xend=15, y=38, yend=0), color = "black", linetype = "dashed") +
-    scale_x_continuous(breaks = seq(0,18,by=1)) +
+    scale_x_continuous(breaks = seq(0,18,by=2)) +
     facet_wrap(~strain, nrow = 1, ncol = 3, scales = "free", labeller = labeller(strain = strain.labs)) +
     theme_bw() +
     theme(panel.grid = element_blank()) +
