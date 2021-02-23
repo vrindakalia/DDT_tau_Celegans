@@ -12,6 +12,10 @@ library(cowplot)
 
 three <- read_tsv("swim_behavior/data/raw_data_aggregated.txt")
 
+# Change levels for figure
+three$trt = factor(three$trt, levels = c("DMSO", "DDT"))
+three$strain.name = factor(three$strain.name, levels = c("N2", "BR5271", "BR5270"))
+
 # SEM to reduce day-to-day variability
 run.summarised <- three %>% group_by(run, assay.name, strain.name, trt) %>% 
     summarise(mean = mean(measure, na.rm = T), sd = sd(measure, na.rm = T), n()) 
@@ -33,7 +37,7 @@ waveint <- sem %>%
     theme(plot.title = element_text(size = 11)) +
     guides(fill = guide_legend("")) +
     geom_segment(aes(x=0.85, xend=2.85, y=125, yend=125)) +
-    annotate("text", x = 1.85, y = 130, label = "*", size = 4) +
+    annotate("text", x = 1.85, y = 130, label = "*", size = 5) +
     geom_segment(aes(x = 0.85, xend = 0.85, y = 120, yend = 125)) +
     geom_segment(aes(x = 2.85, xend = 2.85, y = 120, yend = 125)) +
     theme(legend.position = "bottom",
@@ -54,7 +58,7 @@ tr.speed <- sem %>%
     theme(plot.title = element_text(size = 11)) +
     guides(fill = guide_legend("")) +
     geom_segment(aes(x=0.85, xend=2.85, y=12, yend=12)) +
-    annotate("text", x = 1.85, y = 12.5, label = "*", size = 4) +
+    annotate("text", x = 1.85, y = 12.5, label = "*", size = 5) +
     geom_segment(aes(x = 0.85, xend = 0.85, y = 12, yend = 11.5)) +
     geom_segment(aes(x = 2.85, xend = 2.85, y = 12, yend = 11.5)) +
     theme(legend.position = "bottom",
@@ -75,7 +79,7 @@ curling <- sem %>%
     theme(plot.title = element_text(size = 11)) +
     guides(fill = guide_legend("")) +
     geom_segment(aes(x=2.85, xend=3.15, y=2.7, yend=2.7)) +
-    annotate("text", x = 3, y = 2.8, label = "*", size = 4) +
+    annotate("text", x = 3, y = 2.8, label = "*", size = 5) +
     theme(legend.position = "bottom",
           legend.margin = margin(0,0,0,0),
           axis.text.x = element_text(size = 7.5)) +
@@ -94,7 +98,7 @@ activity <- sem %>%
     theme(plot.title = element_text(size = 11)) +
     guides(fill = guide_legend("")) +
     geom_segment(aes(x= 0.85, xend=2.85, y=505, yend=505)) +
-    annotate("text", x = 1.85, y = 520, label = "*", size = 4) +
+    annotate("text", x = 1.85, y = 520, label = "*", size = 5) +
     geom_segment(aes(x = 0.85, xend = 0.85, y = 490, yend = 505)) +
     geom_segment(aes(x = 2.85, xend = 2.85, y = 490, yend = 505)) +
     theme(legend.position = "bottom",
@@ -120,7 +124,7 @@ legend_b <- get_legend(
         theme(legend.position = "bottom")
 )
 
-plot_grid(prow, legend_b, ncol = 1, rel_heights = c(1, .1))
+swim <- plot_grid(prow, legend_b, ncol = 1, rel_heights = c(1, .1))
 
 # To save plot as a pdf
 #pdf("swim_behavior/figures/swim_main_figure.pdf", width = 6, height = 6)

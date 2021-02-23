@@ -38,15 +38,15 @@ mito <- resp %>%
     guides(fill = guide_legend("")) +
     theme(legend.position = "none") +
     geom_segment(aes(x=2.85, xend=3.25, y=12, yend=12)) +
-    annotate("text", x = 3.05, y = 12.5, label = "*", size = 6) +
+    annotate("text", x = 3.05, y = 12.5, label = "*", size = 5) +
     geom_segment(aes(x=1.85, xend=2.25, y=18, yend=18)) +
-    annotate("text", x = 2.05, y = 18.5, label = "***", size = 6) +
-    geom_segment(aes(x=0.85, xend=1.25, y=20, yend=20)) +
-    annotate("text", x = 1.05, y = 20.5, label = "***", size = 6) +
-    geom_segment(aes(x=1.85, xend=2.85, y=20, yend=20)) +
-    geom_segment(aes(x=1.85, xend=1.85, y = 19, yend= 20)) +
-    geom_segment(aes(x=2.85, xend=2.85, y=19, yend=20)) +
-    annotate("text", x = 2.35, y = 20.5, label = "***", size = 6) +
+    annotate("text", x = 2.05, y = 18.5, label = "***", size = 5) +
+    geom_segment(aes(x=0.85, xend=1.25, y=23, yend=23)) +
+    annotate("text", x = 1.05, y = 23.5, label = "***", size = 5) +
+    geom_segment(aes(x=1.85, xend=2.85, y=23, yend=23)) +
+    geom_segment(aes(x=1.85, xend=1.85, y = 22, yend= 23)) +
+    geom_segment(aes(x=2.85, xend=2.85, y=22, yend=23)) +
+    annotate("text", x = 2.35, y = 23.5, label = "***", size = 5) +
     scale_x_discrete(labels = c("N2 \n(Control)", "BR5271 \n(Non-agg)", "BR5270 \n(Agg)"))
 
 # Maximal respiration
@@ -64,15 +64,15 @@ max <- resp %>%
     guides(fill = guide_legend("")) +
     theme(legend.position = "none") +
     geom_segment(aes(x=1.85, xend=2.25, y=38.5, yend=38.5)) +
-    annotate("text", x = 2.05, y = 39.5, label = "***", size = 6) +
+    annotate("text", x = 2.05, y = 39.5, label = "***", size = 5) +
     geom_segment(aes(x=0.85, xend=1.25, y=38, yend=38)) +
-    annotate("text", x = 1.05, y = 39.5, label = "***", size = 6) +
-    geom_segment(aes(x=1.85, xend=2.85, y=41.5, yend=41.5)) +
-    geom_segment(aes(x=1.85, xend=1.85, y = 39.7, yend=41.5)) +
-    geom_segment(aes(x=2.85, xend=2.85, y=39.7, yend=41.5)) +
-    annotate("text", x = 2.35, y = 42.5, label = "***", size = 6) +
+    annotate("text", x = 1.05, y = 39.5, label = "***", size = 5) +
+    geom_segment(aes(x=1.85, xend=2.85, y=43, yend=43)) +
+    geom_segment(aes(x=1.85, xend=1.85, y = 41.5, yend = 43)) +
+    geom_segment(aes(x=2.85, xend=2.85, y= 41.5, yend= 43)) +
+    annotate("text", x = 2.35, y = 43.5, label = "***", size = 5) +
     geom_segment(aes(x=2.85, xend=3.25, y=23, yend=23)) +
-    annotate("text", x = 3.05, y = 24.5, label = "ns", size = 4) +
+    annotate("text", x = 3.05, y = 25.5, label = "ns", size = 3) +
     scale_x_discrete(labels = c("N2 \n(Control)", "BR5271 \n(Non-agg)", "BR5270 \n(Agg)"))
 
 # Spare capacity
@@ -90,15 +90,15 @@ spare <- resp %>%
     guides(fill = guide_legend("")) +
     theme(legend.position = "none") +
     geom_segment(aes(x=1.85, xend=2.25, y=28, yend=28)) +
-    annotate("text", x = 2.05, y = 28.5, label = "***", size = 6) +
+    annotate("text", x = 2.05, y = 28.5, label = "***", size = 5) +
     geom_segment(aes(x=0.85, xend=1.25, y=24, yend=24)) +
-    annotate("text", x = 1.05, y = 24.5, label = "***", size = 6) +
-    geom_segment(aes(x=1.85, xend=2.85, y=30, yend=30)) +
-    geom_segment(aes(x=1.85, xend=1.85, y = 29, yend=30)) +
-    geom_segment(aes(x=2.85, xend=2.85, y=29, yend=30)) +
-    annotate("text", x = 2.35, y = 30.5, label = "***", size = 6) +
+    annotate("text", x = 1.05, y = 24.5, label = "***", size = 5) +
+    geom_segment(aes(x=1.85, xend=2.85, y=32, yend=32)) +
+    geom_segment(aes(x=1.85, xend=1.85, y = 31, yend=32)) +
+    geom_segment(aes(x=2.85, xend=2.85, y=31, yend=32)) +
+    annotate("text", x = 2.35, y = 32.5, label = "***", size = 5) +
     geom_segment(aes(x=2.85, xend=3.25, y=15, yend=15)) +
-    annotate("text", x = 3.05, y = 16.2, label = "ns", size = 4) +
+    annotate("text", x = 3.05, y = 17, label = "ns", size = 3) +
     geom_segment(aes(x=2.15, xend=2.15, y=3.883473, yend=3.883473+4.630356)) +
     scale_x_discrete(labels = c("N2 \n(Control)", "BR5271 \n(Non-agg)", "BR5270 \n(Agg)")) 
 
@@ -117,15 +117,15 @@ azide <- resp %>%
     guides(fill = guide_legend("")) +
     theme(legend.position = "bottom") +
     geom_segment(aes(x=1.85, xend=2.25, y=7.3, yend=7.3)) +
-    annotate("text", x = 2.05, y = 7.4, label = "***", size = 6) +
+    annotate("text", x = 2.05, y = 7.4, label = "***", size = 5) +
     geom_segment(aes(x=0.85, xend=1.25, y=7.3, yend=7.3)) +
-    annotate("text", x = 1.05, y = 7.4, label = "***", size = 6) +
-    geom_segment(aes(x=1.85, xend=2.85, y=7.9, yend=7.9)) +
-    geom_segment(aes(x=1.85, xend=1.85, y = 7.7, yend=7.9)) +
-    geom_segment(aes(x=2.85, xend=2.85, y=7.7, yend=7.9)) +
-    annotate("text", x = 2.35, y = 8.1, label = "***", size = 6) +
+    annotate("text", x = 1.05, y = 7.4, label = "***", size = 5) +
+    geom_segment(aes(x=1.85, xend=2.85, y=9, yend=9)) +
+    geom_segment(aes(x=1.85, xend=1.85, y = 8.6, yend=9)) +
+    geom_segment(aes(x=2.85, xend=2.85, y = 8.6, yend = 9)) +
+    annotate("text", x = 2.35, y = 9.2, label = "***", size = 5) +
     geom_segment(aes(x=2.85, xend=3.25, y=2.7, yend=2.7)) +
-    annotate("text", x = 3.05, y = 3.1, label = "ns", size = 4) +
+    annotate("text", x = 3.05, y = 3.3, label = "ns", size = 3) +
     scale_x_discrete(labels = c("N2 \n(Control)", "BR5271 \n(Non-agg)", "BR5270 \n(Agg)")) 
 
 
@@ -233,7 +233,7 @@ profile <- ggplot(data = ocr_worms_plot, mapping = aes(x = Measurement, y = mean
     theme_bw() +
     theme(panel.grid = element_blank()) +
     theme(legend.position = "bottom") +
-    theme(legend.title = element_blank(), axis.text.x = element_text(size = 6)) 
+    theme(legend.title = element_blank(), axis.text.x = element_text(size = 5)) 
 
 # Use cowplot to create a grid of figures for publication
 
@@ -249,13 +249,13 @@ legend_p <- get_legend(
         theme(legend.position = "bottom")
 )
 
-bottom_row <- plot_grid(mito, max, spare, azide + theme(legend.position="none"), labels = c('B', 'C', "D", "E"), label_size = 12)
+bottom_row <- plot_grid(mito, max, spare, azide + theme(legend.position="none"), labels = c('F', 'G', "H", "I"), label_size = 12)
 row_legend <- plot_grid(bottom_row, legend_b, ncol = 1, rel_heights = c(1, .1))
 
 prof <- profile + theme(legend.position="none")
 prof_legend <- plot_grid(prof, legend_p,  ncol = 1, rel_heights = c(1, .1))
 
-plot_grid(prof_legend, row_legend, nrow = 2, rel_heights = c(1.5,3), labels = c("A", ""), label_size = 12)
+seahorse <- plot_grid(prof_legend, row_legend, nrow = 2, rel_heights = c(1.5,3), labels = c("E", ""), label_size = 12)
 
 # To save plot as a pdf
 #pdf("mitochondrial_function/figures/ocr_bars.pdf", width = 7.5, height = 10)
