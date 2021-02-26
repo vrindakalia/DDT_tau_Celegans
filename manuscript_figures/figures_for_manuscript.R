@@ -2,6 +2,12 @@
 # COMPILE PLOTS TO MAKE FIGURES FOR MANUSCRIPT
 ###############
 
+
+###############
+# FIGURE 1
+###############
+
+
 ###############
 # FIGURE 2
 ###############
@@ -32,10 +38,14 @@ dev.off()
 ###############
 # FIGURE 5
 ###############
+
+###############
+# FIGURE 6
+###############
 source("survival/code/survival_analysis.R")
 source("learning_behavior/code/stam.R")
 
-pdf("manuscript_figures/figure5.pdf", width = 8, height = 7)
+pdf("manuscript_figures/figure6.pdf", width = 8, height = 7)
 plot_grid(stam.plot, survival.plot, ncol = 1)
 dev.off()
 
