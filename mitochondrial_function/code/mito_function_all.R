@@ -249,13 +249,13 @@ legend_p <- get_legend(
         theme(legend.position = "bottom")
 )
 
-bottom_row <- plot_grid(mito, max, spare, azide + theme(legend.position="none"), labels = c('F', 'G', "H", "I"), label_size = 12)
+bottom_row <- plot_grid(mito, max, spare, azide + theme(legend.position="none"), labels = c('B', 'C', "D", "E"), label_size = 12)
 row_legend <- plot_grid(bottom_row, legend_b, ncol = 1, rel_heights = c(1, .1))
 
 prof <- profile + theme(legend.position="none")
 prof_legend <- plot_grid(prof, legend_p,  ncol = 1, rel_heights = c(1, .1))
 
-seahorse <- plot_grid(prof_legend, row_legend, nrow = 2, rel_heights = c(1.5,3), labels = c("E", ""), label_size = 12)
+seahorse <- plot_grid(prof_legend, row_legend, nrow = 2, rel_heights = c(1.5,3), labels = c("A", ""), label_size = 12)
 
 # To save plot as a pdf
 #pdf("mitochondrial_function/figures/ocr_bars.pdf", width = 7.5, height = 10)
