@@ -158,3 +158,8 @@ supplemental <- sem %>%
 #pdf("swim_behavior/figures/swim_supplemental.pdf", width = 6, height = 10)
 #supplemental
 #dev.off()
+
+png("swim_behavior//figures/curling.png", 
+           res = 300, units = "in", height = 3, width = 2.5)
+curling
+dev.off()

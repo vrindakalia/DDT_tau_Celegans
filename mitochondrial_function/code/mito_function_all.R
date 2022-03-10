@@ -262,3 +262,18 @@ seahorse <- plot_grid(prof_legend, row_legend, nrow = 2, rel_heights = c(1.5,3),
 #plot_grid(prof_legend, row_legend, nrow = 2, rel_heights = c(1.5,3), labels = c("A", ""), label_size = 12)
 #dev.off()
 
+# Save just basal respiration results
+png("mitochondrial_function/figures/basal_resp.png", 
+    res = 300, units = "in", height = 3, width = 3)
+mito
+dev.off()
+
+read_tsv("mitochondrial_function/data/raw_data.txt") %>% 
+    group_by(run, treatment, strain) %>% 
+    mutate(run.mito = mean(mito), run.max = mean(max)) %>% 
+    ungroup() %>% 
+    mutate(gt = case_when(strain == "161" ~ "Agg",
+                          strain == "162" ~ "Non-agg",
+                          strain == "N2" ~ "N2")) %>% 
+    ggplot(aes(x = run.mito, y = run.max)) +
+    geom_point(aes(color = gt, shape = treatment))

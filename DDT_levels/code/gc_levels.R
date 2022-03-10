@@ -161,7 +161,31 @@ all <- plot_grid(all.1, all.2, nrow = 2)
 ddt <- plot_grid(n2_figure, nrow = 1, labels = c("A"))
 #dev.off()
 
+# Updated figure 2
 
+n2_figure_updated <- sample.conc.avg %>% 
+    mutate(strain = unlist(lapply(str_split(group, "_"), function(x) x[1]))) %>% 
+    mutate(exposure = unlist(lapply(str_split(group, "_"), function(x) x[2]))) %>% 
+    filter(strain == "N2") %>% 
+    filter(chemical %in% c("p,p'-DDT",
+                           "p,p'-DDE")) %>% 
+    mutate(pgmean = avg.level * 1000) %>% 
+    ggplot(aes(x = fct_reorder(exposure, avg.level, mean), y = avg.level, fill = exposure)) +
+    geom_errorbar(aes(ymin = avg.level - sd.level, ymax = avg.level + sd.level), width = 0.35) +
+    geom_bar(stat = "identity") +
+    facet_wrap(~chemical) +
+    theme_bw() +
+    labs(x = "",
+         y = "Level of metabolite \n(pg/worm)",
+         fill = "") +
+    theme(panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          legend.position = "none",
+          axis.text.x = element_text(size = 7)) +
+    scale_fill_manual(values = c("grey79", "grey39", "grey59", "grey99")) +
+    scale_x_discrete(labels = c("DMSO", expression(0.3*mu*M), expression(3*mu*M), expression(30*mu*M))) +
+    coord_flip()
 
- 
-
+#pdf("DDT_levels/figures/main_n2_updated.pdf", width = 4, height = 3)
+ddt_updated <- plot_grid(n2_figure_updated, nrow = 1, labels = c("A"))
+#dev.off()

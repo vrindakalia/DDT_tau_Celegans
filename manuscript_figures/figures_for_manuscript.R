@@ -15,9 +15,12 @@
 
 source("DDT_levels/code/gc_levels.R")
 source("worm_size/code/worm_size.R")
+source("egg_laying/code/egg_numbers.R")
 
-pdf("manuscript_figures/figure2.pdf", width =4.3, height = 8)
-plot_grid(ddt, size, ncol = 1, rel_heights = c(0.35,1))
+row1 <- plot_grid(ddt_updated, egg_lay, ncol = 2)
+
+pdf("manuscript_figures/figure2_updated.pdf", width =4.5, height = 7)
+plot_grid(row1, size, ncol = 1, rel_heights = c(0.4,1))
 dev.off()
 
 ###############

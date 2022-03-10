@@ -45,7 +45,7 @@ l4s <- all_ever %>%
     geom_segment(aes(x=2.85, xend=3.25, y=875, yend=875)) +
     annotate("text", x = 3.05, y = 900, label = "***", size = 4) +
     scale_x_discrete(labels = c("N2 \n(Control)", "BR5271 \n(Non-agg)", "BR5270 \n(Agg)")) +
-    ggtitle("L4 stage")
+    ggtitle("Larval stage 4")
 
 adults <- all_ever %>% 
     filter(time == "70-to-72") %>% 
@@ -65,7 +65,7 @@ adults <- all_ever %>%
     geom_segment(aes(x=0.85, xend=3.25, y=2100, yend=2100)) +
     annotate("text", x = 2.05, y = 2125, label = "***", size = 4) +
     scale_x_discrete(labels = c("N2 \n(Control)", "BR5271 \n(Non-agg)", "BR5270 \n(Agg)")) +
-    ggtitle("Adult stage")
+    ggtitle("Day 1 adult")
 
 l4s.tof <- all_ever %>% 
     filter(time == "46-to-50") %>% 
@@ -93,7 +93,7 @@ l4s.tof <- all_ever %>%
     geom_segment(aes(x=2.85, xend=3.25, y=1450, yend=1450)) +
     annotate("text", x = 3.05, y = 1480, label = "***", size = 4) +
     scale_x_discrete(labels = c("N2 \n(Control)", "BR5271 \n(Non-agg)", "BR5270 \n(Agg)"))+
-    ggtitle("L4 stage")
+    ggtitle("Larval stage 4")
 
 adults.tof <- all_ever %>% 
     filter(time == "70-to-72") %>% 
@@ -114,14 +114,14 @@ adults.tof <- all_ever %>%
     geom_segment(aes(x=0.85, xend=3.25, y=2500, yend=2500)) +
     annotate("text", x = 2.05, y = 2525, label = "***", size = 4) +
     scale_x_discrete(labels = c("N2 \n(Control)", "BR5271 \n(Non-agg)", "BR5270 \n(Agg)"))+
-    ggtitle("Adult stage")
+    ggtitle("Day 1 adult")
 
 
 prow2 <- plot_grid(
     l4s + theme(legend.position="none"),
     l4s.tof + theme(legend.position="none"),
     align = 'vh',
-    labels = c("B", "C"),
+    labels = c("C", "D"),
     hjust = -1,
     nrow = 1
 )
@@ -130,7 +130,7 @@ prow3 <- plot_grid(
     adults + theme(legend.position="none"),
     adults.tof + theme(legend.position="none"),
     align = 'vh',
-    labels = c("D", "E"),
+    labels = c("E", "F"),
     hjust = -1,
     nrow = 1
 )
