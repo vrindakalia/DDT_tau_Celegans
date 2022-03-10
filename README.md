@@ -2,7 +2,9 @@
 DDT exacerbates tau protein toxicity in worms
 
 The contents of this repository are associated with this manuscript:
-Kalia, V., Bradner, J., Niedzwiecki, M., Lau, F., Bucher, M., Manz, K., Coates Fuentes, Z., Pennell, K., Walker, D.I., Picard, M., Hu, W., Jones D.P., Miller, G.W. Cross-species metabolomic analysis of DDT and Alzheimer’s disease-associated tau toxicity. *In preparation*.
+Kalia, V.,Niedzwiecki, M.N., Bradner, J.M.,  Lau, F., Anderson, F.L., Bucher, M.L., Manz, K.E., Schlotter, A.P., Coates Fuentes, Z., Pennell, K.D., Picard, M.,  Walker, D.I., Hu, W.T., Jones D.P., Miller, G.W. Cross-species metabolomic analysis of tau- and DDT-related toxicity. *Under review*.
 
-Each folder represents an outcome measured in *C. elegans* exposed to the persistent organic pollutant, DDT. 
+Each folder represents an outcome measured in *C. elegans* exposed to DDT, a legacy pesticide and persistent organic pollutant. 
+
+
 
